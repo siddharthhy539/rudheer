@@ -67,7 +67,6 @@
     :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
 
     .container { width: min(calc(100% - 2rem), var(--content-default)); margin-inline: auto; }
-    .skip-link { position: absolute; left: 1rem; top: -3rem; background: var(--color-primary); color: white; padding: 0.75rem 1rem; border-radius: var(--radius-md); z-index: 100; }
     .skip-link:focus { top: 1rem; }
 
     header {
@@ -202,7 +201,7 @@
     .section-shell::before {
       content: ""; position: absolute; inset: 14px; border: 2px dashed rgba(47,116,255,0.18); border-radius: 26px; pointer-events: none;
     }
-    .cards, .extras, .schedule, .gallery-wrap { display: grid; gap: var(--space-4); }
+    .cards, .extras, .schedule,
     .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .extras { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: var(--space-4); }
     .schedule { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -219,16 +218,10 @@
     .card p { color: var(--color-text); margin-top: 0.4rem; font-weight: 700; }
     .section-intro { color: var(--color-text); max-width: 62ch; margin-bottom: var(--space-5); font-weight: 800; }
     .map-link { color: #000000; font-weight: 800; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-
-    .gallery-wrap { grid-template-columns: 0.9fr 1.1fr; align-items: stretch; }
-    .upload-panel, .preview-panel {
-      background: var(--color-surface); border-radius: 28px; border: 1px solid var(--color-border); padding: var(--space-6); box-shadow: var(--shadow-sm);
-    }
-    .upload-panel { display: grid; place-items: center; text-align: center; }
+    .upload-panel,
     .upload-panel input {
       margin-top: 1rem; color: var(--color-text); font-weight: 800; background: rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 16px; border: 1px solid var(--color-border);
     }
-    .preview-panel { min-height: 360px; display: grid; place-items: center; overflow: hidden; }
     .preview-panel img { width: 100%; height: 100%; object-fit: cover; }
 
     .faq { display: grid; gap: var(--space-3); }
@@ -261,7 +254,7 @@
     @keyframes notePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
 
     @media (max-width: 960px) {
-      .hero-grid, .cards, .extras, .schedule, .gallery-wrap { grid-template-columns: 1fr; }
+      .hero-grid, .cards, .extras, .schedule,
       .hero-art { min-height: 640px; }
       .hero-card-note { left: 28px; right: 28px; bottom: 20px; }
       .hero-photo { position: relative; left: 24px; bottom: auto; top: 240px; }
@@ -282,7 +275,6 @@
 </style>
 </head>
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
   <header>
     <div class="container nav">
       <a href="index.html" class="brand" aria-label="Rudheer birthday home">
@@ -300,9 +292,7 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="details.html">Details</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="gallery.html">Photo</a>
-        <a href="faq.html">FAQ</a>
+        <a href="schedule.html">Schedule</a><a href="faq.html">FAQ</a>
       </nav>
     </div>
   </header>

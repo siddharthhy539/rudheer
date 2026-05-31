@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rudheer's First Birthday - Home</title>
-  <meta name="description" content="A cartoon-style first birthday invitation website for Rudheer Potu with playful space animations." />
+  <title>rudheer's first birthday - home</title>
+  <meta name="description" content="a cartoon-style first birthday invitation website for rudheer potu with playful space animations." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=baloo+2:wght@400;600;700;800&family=nunito:wght@600;700;800&display=swap" rel="stylesheet">
   <style>
 :root {
       --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -38,8 +38,8 @@
       --radius-sm: 0.5rem; --radius-md: 1rem; --radius-lg: 1.6rem; --radius-xl: 2.1rem; --radius-full: 9999px;
       --shadow-sm: 0 14px 28px rgba(0, 0, 0, 0.28);
       --shadow-md: 0 28px 60px rgba(0, 0, 0, 0.36);
-      --font-display: 'Baloo 2', 'Trebuchet MS', sans-serif;
-      --font-body: 'Nunito', 'Arial', sans-serif;
+      --font-display: 'baloo 2', 'trebuchet ms', sans-serif;
+      --font-body: 'nunito', 'arial', sans-serif;
       --content-default: 1120px;
       --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
       --transition-bouncy: 420ms cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -68,7 +68,6 @@
     :focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
 
     .container { width: min(calc(100% - 2rem), var(--content-default)); margin-inline: auto; }
-    .skip-link { position: absolute; left: 1rem; top: -3rem; background: var(--color-primary); color: white; padding: 0.75rem 1rem; border-radius: var(--radius-md); z-index: 100; }
     .skip-link:focus { top: 1rem; }
 
     header {
@@ -81,19 +80,19 @@
     .brand-badge {
       width: 50px; height: 50px; border-radius: 18px; background: linear-gradient(135deg, var(--color-yellow), var(--color-peach));
       display: grid; place-items: center; box-shadow: var(--shadow-sm); border: 2px solid rgba(255,255,255,0.5);
-      animation: bounceBadge 4s infinite;
+      animation: bouncebadge 4s infinite;
       transform-origin: center;
     }
     .nav-links { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
     .nav-links a {
       color: var(--color-text);
       font-weight: 800;
-      font-size: var(--text-sm);
-      padding: 0.35rem 0.55rem;
+      font-size: calc(var(--text-sm) * 0.9);
+      padding: 0.25rem 0.4rem;
       border-radius: 999px;
       transition: color var(--transition-interactive), background var(--transition-interactive), transform var(--transition-bouncy);
     }
-    .nav-links a:hover, .nav-links a:focus-visible { background: rgba(255,255,255,0.12); transform: translateY(-2px) scale(1.04); }
+    .nav-links a:hover, .nav-links a:focus-visible { background: rgba(255,255,255,0.12); transform: translatey(-2px) scale(1.04); }
 
     main section { padding-block: clamp(var(--space-12), 8vw, var(--space-20)); }
     h1, h2, h3 { font-family: var(--font-display); line-height: 1.02; color: var(--color-text); }
@@ -106,17 +105,21 @@
     }
     .tag {
       position: relative;
-      z-index: 20;
-      display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.45rem 0.85rem; border-radius: var(--radius-full);
-      background: rgba(255,255,255,0.08); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); color: var(--color-text); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.09em; font-weight: 800;
-      animation: floatTag 3.6s ease-in-out infinite;
-      margin-bottom: 1.6rem;
-      margin-top: auto;
+      z-index: 5;
+      display: inline-flex; align-items: center; gap: 0.45rem; padding: 0.35rem 0.7rem; border-radius: var(--radius-full);
+      background: rgba(255,255,255,0.08); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm); color: var(--color-text); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.09em; font-weight: 800;
+      animation: floattag 3.6s ease-in-out infinite;
+      margin-bottom: 1.8rem;
+      margin-top: 1.5rem;
     }
     .tag-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--color-yellow); box-shadow: 16px 0 0 var(--color-secondary), 32px 0 0 var(--color-peach); }
     .hero-copy h1 {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+      margin-top: 0;
+      margin-bottom: 1.2rem;
+    }
+    .hero-copy {
+      padding-top: 1.5rem;
+      margin-top: 0.5rem;
     }
     .hero-copy p { max-width: 56ch; margin-top: var(--space-4); color: var(--color-text); font-weight: 800; }
     .hero-actions { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-6); }
@@ -125,11 +128,11 @@
       transition: transform var(--transition-bouncy), background var(--transition-interactive), box-shadow var(--transition-interactive), color var(--transition-interactive);
     }
     .btn-primary { background: var(--color-primary); color: white; box-shadow: var(--shadow-sm); }
-    .btn-primary:hover, .btn-primary:focus-visible { background: var(--color-primary-hover); transform: translateY(-3px) scale(1.04); }
-    .btn-primary:active { transform: translateY(0) scale(0.98); }
+    .btn-primary:hover, .btn-primary:focus-visible { background: var(--color-primary-hover); transform: translatey(-3px) scale(1.04); }
+    .btn-primary:active { transform: translatey(0) scale(0.98); }
     .btn-secondary { background: rgba(255,255,255,0.08); border: 1px solid var(--color-border); color: var(--color-text); }
-    .btn-secondary:hover, .btn-secondary:focus-visible { transform: translateY(-3px) scale(1.04); }
-    .btn-secondary:active { transform: translateY(0) scale(0.98); }
+    .btn-secondary:hover, .btn-secondary:focus-visible { transform: translatey(-3px) scale(1.04); }
+    .btn-secondary:active { transform: translatey(0) scale(0.98); }
 
     .hero-art {
       position: relative; min-height: 580px; border-radius: 38px;
@@ -143,7 +146,7 @@
     .bubble, .star, .planet, .cloud, .sparkle { position: absolute; }
     .bubble {
       inset: auto auto 26px 26px; background: rgba(255,255,255,0.16); width: 160px; height: 160px; border-radius: 50%; filter: blur(2px);
-      animation: floatBubble 6s ease-in-out infinite;
+      animation: floatbubble 6s ease-in-out infinite;
     }
     .star {
       width: 18px; height: 18px; background: var(--color-yellow); clip-path: polygon(50% 0%, 61% 37%, 100% 50%, 61% 63%, 50% 100%, 39% 63%, 0% 50%, 39% 37%);
@@ -160,14 +163,14 @@
     .planet {
       top: 52px; right: 40px; width: 108px; height: 108px; border-radius: 50%; background: radial-gradient(circle at 38% 34%, #fff4a4, #ffcb46 58%, #ffac2d 100%);
       box-shadow: 0 0 0 14px rgba(255,255,255,0.08);
-      animation: planetBob 5s ease-in-out infinite;
+      animation: planetbob 5s ease-in-out infinite;
     }
     .planet::after {
       content: ""; position: absolute; left: -20px; top: 40px; width: 148px; height: 28px; border: 6px solid rgba(255,255,255,0.38); border-radius: 50%; transform: rotate(-10deg);
     }
     .cloud {
       width: 130px; height: 42px; background: rgba(255,255,255,0.22); border-radius: 999px;
-      animation: driftCloud 9s ease-in-out infinite;
+      animation: driftcloud 9s ease-in-out infinite;
     }
     .cloud::before, .cloud::after { content: ""; position: absolute; bottom: 8px; background: inherit; border-radius: 50%; }
     .cloud::before { width: 42px; height: 42px; left: 16px; }
@@ -176,16 +179,16 @@
     .cloud.c2 { bottom: 62px; left: 34px; transform: scale(0.92); animation-delay: 2s; }
     .rocket {
       position: absolute; right: 68px; bottom: 96px; width: 132px; transform: rotate(14deg); filter: drop-shadow(0 16px 26px rgba(0,0,0,0.2));
-      animation: rocketFloat 3.6s ease-in-out infinite;
+      animation: rocketfloat 3.6s ease-in-out infinite;
       transform-origin: center;
     }
     .hero-photo {
       position: absolute; left: 48px; bottom: 56px; z-index: 2; width: 270px; aspect-ratio: 4 / 5; background: #fff;
       border-radius: 34px; overflow: hidden; border: 6px solid rgba(255,255,255,0.45); box-shadow: var(--shadow-sm);
-      animation: photoBounce 4.2s ease-in-out infinite;
+      animation: photobounce 4.2s ease-in-out infinite;
     }
     .hero-photo::before {
-      content: "Photo"; position: absolute; inset: 12px auto auto 12px; background: var(--color-yellow); color: var(--color-text); font-weight: 800; font-size: var(--text-xs); padding: 0.35rem 0.7rem; border-radius: var(--radius-full); z-index: 3;
+      content: "photo"; position: absolute; inset: 12px auto auto 12px; background: var(--color-yellow); color: var(--color-text); font-weight: 800; font-size: var(--text-xs); padding: 0.35rem 0.7rem; border-radius: var(--radius-full); z-index: 3;
     }
     .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
     .hero-photo-fallback {
@@ -194,7 +197,7 @@
     }
     .hero-card-note {
       position: absolute; left: 340px; bottom: 88px; right: 28px; z-index: 2; background: rgba(7,26,58,0.88); color: var(--color-text); padding: 1rem 1.1rem; border-radius: 24px;
-      box-shadow: var(--shadow-sm); font-weight: 800; animation: notePulse 4.5s ease-in-out infinite; border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm); font-weight: 800; animation: notepulse 4.5s ease-in-out infinite; border: 1px solid var(--color-border);
     }
 
     .section-shell {
@@ -203,7 +206,7 @@
     .section-shell::before {
       content: ""; position: absolute; inset: 14px; border: 2px dashed rgba(47,116,255,0.18); border-radius: 26px; pointer-events: none;
     }
-    .cards, .extras, .schedule, .gallery-wrap { display: grid; gap: var(--space-4); }
+    .cards, .extras, .schedule,
     .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .extras { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: var(--space-4); }
     .schedule { grid-template-columns: repeat(3, minmax(0, 1fr)); }
@@ -211,7 +214,7 @@
       position: relative; background: var(--color-surface); border-radius: 28px; padding: var(--space-5); border: 1px solid var(--color-border); box-shadow: var(--shadow-sm);
       transition: transform var(--transition-bouncy), box-shadow var(--transition-interactive);
     }
-    .card:hover { transform: translateY(-5px) scale(1.01); box-shadow: var(--shadow-md); }
+    .card:hover { transform: translatey(-5px) scale(1.01); box-shadow: var(--shadow-md); }
     .card::after {
       content: ""; position: absolute; width: 26px; height: 26px; right: 20px; top: 18px; border-radius: 50%; background: rgba(121,218,255,0.22); box-shadow: -14px 10px 0 rgba(255,213,79,0.22);
     }
@@ -220,16 +223,10 @@
     .card p { color: var(--color-text); margin-top: 0.4rem; font-weight: 700; }
     .section-intro { color: var(--color-text); max-width: 62ch; margin-bottom: var(--space-5); font-weight: 800; }
     .map-link { color: #000000; font-weight: 800; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-
-    .gallery-wrap { grid-template-columns: 0.9fr 1.1fr; align-items: stretch; }
-    .upload-panel, .preview-panel {
-      background: var(--color-surface); border-radius: 28px; border: 1px solid var(--color-border); padding: var(--space-6); box-shadow: var(--shadow-sm);
-    }
-    .upload-panel { display: grid; place-items: center; text-align: center; }
+    .upload-panel,
     .upload-panel input {
       margin-top: 1rem; color: var(--color-text); font-weight: 800; background: rgba(255,255,255,0.08); padding: 0.75rem; border-radius: 16px; border: 1px solid var(--color-border);
     }
-    .preview-panel { min-height: 360px; display: grid; place-items: center; overflow: hidden; }
     .preview-panel img { width: 100%; height: 100%; object-fit: cover; }
 
     .faq { display: grid; gap: var(--space-3); }
@@ -243,26 +240,26 @@
     @supports (animation-timeline: view()) {
       .fade-in {
         opacity: 0;
-        animation: revealFade linear both;
+        animation: revealfade linear both;
         animation-timeline: view();
         animation-range: entry 0% entry 75%;
       }
     }
 
-    @keyframes revealFade { to { opacity: 1; } }
-    @keyframes bounceBadge { 0%, 100% { transform: translateY(0) rotate(0deg); } 20% { transform: translateY(-4px) rotate(-3deg); } 40% { transform: translateY(0) rotate(2deg); } 60% { transform: translateY(-6px) rotate(-2deg); } 80% { transform: translateY(0) rotate(1deg); } }
-    @keyframes floatTag { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-    @keyframes floatBubble { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-12px) scale(1.03); } }
+    @keyframes revealfade { to { opacity: 1; } }
+    @keyframes bouncebadge { 0%, 100% { transform: translatey(0) rotate(0deg); } 20% { transform: translatey(-4px) rotate(-3deg); } 40% { transform: translatey(0) rotate(2deg); } 60% { transform: translatey(-6px) rotate(-2deg); } 80% { transform: translatey(0) rotate(1deg); } }
+    @keyframes floattag { 0%, 100% { transform: translatey(0); } 50% { transform: translatey(-6px); } }
+    @keyframes floatbubble { 0%, 100% { transform: translatey(0) scale(1); } 50% { transform: translatey(-12px) scale(1.03); } }
     @keyframes twinkle { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.2); opacity: 0.7; } }
-    @keyframes sparkle { 0% { transform: translateY(0) scale(0.8); opacity: 0.4; } 50% { transform: translateY(-14px) scale(1.25); opacity: 1; } 100% { transform: translateY(-28px) scale(0.8); opacity: 0; } }
-    @keyframes planetBob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-    @keyframes driftCloud { 0%, 100% { transform: translateX(0) scale(1); } 50% { transform: translateX(12px) scale(1.03); } }
-    @keyframes rocketFloat { 0%, 100% { transform: translateY(0) rotate(14deg); } 50% { transform: translateY(-14px) rotate(10deg); } }
-    @keyframes photoBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
-    @keyframes notePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+    @keyframes sparkle { 0% { transform: translatey(0) scale(0.8); opacity: 0.4; } 50% { transform: translatey(-14px) scale(1.25); opacity: 1; } 100% { transform: translatey(-28px) scale(0.8); opacity: 0; } }
+    @keyframes planetbob { 0%, 100% { transform: translatey(0); } 50% { transform: translatey(-10px); } }
+    @keyframes driftcloud { 0%, 100% { transform: translatex(0) scale(1); } 50% { transform: translatex(12px) scale(1.03); } }
+    @keyframes rocketfloat { 0%, 100% { transform: translatey(0) rotate(14deg); } 50% { transform: translatey(-14px) rotate(10deg); } }
+    @keyframes photobounce { 0%, 100% { transform: translatey(0); } 50% { transform: translatey(-8px); } }
+    @keyframes notepulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
 
     @media (max-width: 960px) {
-      .hero-grid, .cards, .extras, .schedule, .gallery-wrap { grid-template-columns: 1fr; }
+      .hero-grid, .cards, .extras, .schedule,
       .hero-art { min-height: 640px; }
       .hero-card-note { left: 28px; right: 28px; bottom: 20px; }
       .hero-photo { position: relative; left: 24px; bottom: auto; top: 240px; }
@@ -283,27 +280,24 @@
 </style>
 </head>
 <body>
-  <a class="skip-link" href="#content">Skip to content</a>
   <header>
     <div class="container nav">
-      <a href="index.html" class="brand" aria-label="Rudheer birthday home">
+      <a href="index.html" class="brand" aria-label="rudheer birthday home">
         <span class="brand-badge" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="var(--color-navy)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 3c2.3 2 3.6 4.5 3.6 7.3C15.6 14.4 12 18 12 18s-3.6-3.6-3.6-7.7C8.4 7.5 9.7 5 12 3Z"></path>
+          <svg viewbox="0 0 24 24" width="26" height="26" fill="none" stroke="var(--color-navy)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3c2.3 2 3.6 4.5 3.6 7.3c15.6 14.4 12 18 12 18s-3.6-3.6-3.6-7.7c8.4 7.5 9.7 5 12 3z"></path>
             <circle cx="12" cy="9.2" r="1.4"></circle>
-            <path d="M9.3 12.4h5.4"></path>
-            <path d="M8.7 15.1 6.4 18"></path>
-            <path d="M15.3 15.1 17.6 18"></path>
+            <path d="m9.3 12.4h5.4"></path>
+            <path d="m8.7 15.1 6.4 18"></path>
+            <path d="m15.3 15.1 17.6 18"></path>
           </svg>
         </span>
-        <span>Rudheer's Space Party</span>
+        <span>rudheer's space party</span>
       </a>
-      <nav class="nav-links" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="details.html">Details</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="gallery.html">Photo</a>
-        <a href="faq.html">FAQ</a>
+      <nav class="nav-links" aria-label="primary">
+        <a href="index.html">home</a>
+        <a href="details.html">details</a>
+        <a href="schedule.html">schedule</a><a href="faq.html">faq</a>
       </nav>
     </div>
   </header>
@@ -312,15 +306,15 @@
     <section id="top">
       <div class="container hero-grid">
         <div class="hero-copy fade-in">
-          <span class="tag"><span class="tag-dot" aria-hidden="true"></span> Blue space birthday</span>
-          <h1>Rudheer is turning one and blasting into fun.</h1>
-          <p>All the main copy is now much darker for easier reading, while the page keeps a playful cartoon look with floating stars, a bobbing rocket, and bouncy buttons.</p>
+          <span class="tag"><span class="tag-dot" aria-hidden="true"></span> blue space birthday</span>
+          <h1>rudheer is turning one and blasting into fun.</h1>
+          <p>all the main copy is now much darker for easier reading, while the page keeps a playful cartoon look with floating stars, a bobbing rocket, and bouncy buttons.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="details.html">See the details</a>
-            <a class="btn btn-secondary" href="https://maps.google.com/?q=Peacock%20Banquet%20Hall%206622%20Dublin%20Blvd%20Dublin%20CA%2094568" target="_blank" rel="noopener noreferrer">Open directions</a>
+            <a class="btn btn-primary" href="details.html">see the details</a>
+            <a class="btn btn-secondary" href="https://maps.google.com/?q=peacock%20banquet%20hall%206622%20dublin%20blvd%20dublin%20ca%2094568" target="_blank" rel="noopener noreferrer">open directions</a>
           </div>
         </div>
-        <div class="hero-art fade-in" aria-label="Cartoon space themed invite art">
+        <div class="hero-art fade-in" aria-label="cartoon space themed invite art">
           <div class="bubble" aria-hidden="true"></div>
           <div class="star s1" aria-hidden="true"></div>
           <div class="star s2" aria-hidden="true"></div>
@@ -332,24 +326,24 @@
           <div class="planet" aria-hidden="true"></div>
           <div class="cloud c1" aria-hidden="true"></div>
           <div class="cloud c2" aria-hidden="true"></div>
-          <svg class="rocket" viewBox="0 0 130 190" fill="none" aria-hidden="true">
-            <path d="M67 12c32 18 39 58 31 97l-33 33-33-33C24 70 31 30 63 12h4Z" fill="#ffffff"></path>
-            <path d="M61 40h8c13 8 17 23 13 41L65 96 48 81c-4-18 1-33 13-41Z" fill="#7bd6ff"></path>
+          <svg class="rocket" viewbox="0 0 130 190" fill="none" aria-hidden="true">
+            <path d="m67 12c32 18 39 58 31 97l-33 33-33-33c24 70 31 30 63 12h4z" fill="#ffffff"></path>
+            <path d="m61 40h8c13 8 17 23 13 41l65 96 48 81c-4-18 1-33 13-41z" fill="#7bd6ff"></path>
             <circle cx="65" cy="61" r="12" fill="#3c82ff"></circle>
-            <path d="M33 107 19 141l28-15 18 18-15 27 35-13 13-41" stroke="#ffd45a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
-            <path d="M48 136c-12 9-21 20-26 35" stroke="#ffad80" stroke-width="9" stroke-linecap="round"></path>
+            <path d="m33 107 19 141l28-15 18 18-15 27 35-13 13-41" stroke="#ffd45a" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="m48 136c-12 9-21 20-26 35" stroke="#ffad80" stroke-width="9" stroke-linecap="round"></path>
           </svg>
-          <div class="hero-photo" id="heroPhotoPreview">
-            <div class="hero-photo-fallback">🎂 Rudheer's Birthday</div>
+          <div class="hero-photo" id="herophotopreview">
+            <div class="hero-photo-fallback">🎂 rudheer's birthday</div>
           </div>
-          <div class="hero-card-note">July 11, 2026 · 12 PM onwards · Peacock Banquet Hall, Dublin</div>
+          <div class="hero-card-note">july 11, 2026 · 12 pm onwards · peacock banquet hall, dublin</div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container">Rudheer Potu · July 11, 2026 · Dublin, California</div>
+    <div class="container">rudheer potu · july 11, 2026 · dublin, california</div>
   </footer>
 </body>
 </html>
