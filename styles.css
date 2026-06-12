@@ -426,6 +426,5 @@ details p {
 }
 
 #countdown {
-  font-size: clamp(3rem, 10vw, 7rem);
-  font-weight: 800;
+  font-size: clamp(1.2rem, 3vw, 2.2rem);
 }
