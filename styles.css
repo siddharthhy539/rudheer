@@ -428,6 +428,4 @@ details p {
 #countdown {
   font-size: clamp(1.2rem, 3vw, 2.2rem);
   color: #87b9ff;
-  text-shadow: 0 0 8px rgba(255, 155, 210, 0.6),
-               0 0 18px rgba(255, 155, 210, 0.35);
 }
