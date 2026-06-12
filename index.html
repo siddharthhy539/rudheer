@@ -10,10 +10,35 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
 </head>
+  <script>
+  const targetDate = new Date("2026-12-31T23:59:59").getTime();
+  const el = document.getElementById("countdown");
+
+  function updateCountdown() {
+    const now = Date.now();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      el.textContent = "Time's up!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    el.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script>
 <body>
   <header>
     <div class="container nav">
       <a href="index.html" class="brand"><span class="brand-badge">🚀</span><span>Rudheer's Space Party</span></a>
+      <div id="countdown"></div>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="baby.html">Our Rocket</a>
