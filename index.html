@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rudheer's First Birthday</title>
-  <div id="countdown"></div>
+  <title>Rudheer's First Birthday  |  <div id="countdown"></div></title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
@@ -67,9 +66,8 @@
   </section>
   <footer><div class="container">Rudheer Potu • July 11, 2026 • California</div></footer>
     <script>
-  const targetDate = new Date("2026-12-31T23:59:59").getTime();
+  const targetDate = new Date("2026-07-11T11:30:00").getTime();
   const el = document.getElementById("countdown");
-
   function updateCountdown() {
     const now = Date.now();
     const diff = targetDate - now;
@@ -86,7 +84,6 @@
 
     el.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
-
   updateCountdown();
   setInterval(updateCountdown, 1000);
 </script>
