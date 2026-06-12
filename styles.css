@@ -424,8 +424,7 @@ details p {
     height: auto;
   }
 }
-
 #countdown {
-  font-size: clamp(1.2rem, 3vw, 2.2rem);
-  color: #87b9ff;
+  color: #ffd86f;
+  text-shadow: 0 0 10px rgba(255, 216, 111, 0.45);
 }
