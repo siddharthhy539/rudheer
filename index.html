@@ -10,35 +10,10 @@
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
 </head>
-  <script>
-  const targetDate = new Date("2026-12-31T23:59:59").getTime();
-  const el = document.getElementById("countdown");
-
-  function updateCountdown() {
-    const now = Date.now();
-    const diff = targetDate - now;
-
-    if (diff <= 0) {
-      el.textContent = "Time's up!";
-      return;
-    }
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    el.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-</script>
 <body>
   <header>
     <div class="container nav">
       <a href="index.html" class="brand"><span class="brand-badge">🚀</span><span>Rudheer's Space Party</span></a>
-      <div id="countdown"></div>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="baby.html">Our Rocket</a>
@@ -47,48 +22,53 @@
       </nav>
     </div>
   </header>
+
   <section class="hero-grid">
     <div class="hero-copy fade-in">
       <span class="tag"><span class="tag-dot"></span> Space Party</span>
       <h1>T-minus 1 year and counting… Happy 1st Birthday, Rudheer!</h1>
-      <p>Join us for a cosmic celebration with stars, rockets, and lots of fun!<br> All the details below.</p>
+      <p>Join us for a cosmic celebration with stars, rockets, and lots of fun!<br>All the details below.</p>
+
+      <div id="countdown"></div>
+
       <div class="hero-actions">
-        <a class="btn btn-secondary" href="details.html"target="_blank">Party Details</a>
-        <a class="btn btn-secondary" href="https://forms.gle/5aDGdsRnJj6wtt396" target="_blank">RSVP</a>
-        <a class="btn btn-secondary" href="faq.html" target="_blank">FAQs</a>
-        <a class="btn btn-secondary" href="https://maps.google.com/?q=Peacock+Banquet+Hall+6622+Dublin+Blvd+Dublin+CA+94568" target="_blank">Get Directions</a>
+        <a class="btn btn-secondary" href="details.html">Party Details</a>
+        <a class="btn btn-secondary" href="https://forms.gle/5aDGdsRnJj6wtt396" target="_blank" rel="noopener noreferrer">RSVP</a>
+        <a class="btn btn-secondary" href="faq.html">FAQs</a>
+        <a class="btn btn-secondary" href="https://maps.google.com/?q=Peacock+Banquet+Hall+6622+Dublin+Blvd+Dublin+CA+94568" target="_blank" rel="noopener noreferrer">Get Directions</a>
       </div>
     </div>
+
     <div class="hero-art fade-in" style="position: relative; height: 640px; transform: scale(1.0); transform-origin: center; overflow: visible;">
-        <svg viewBox="0 0 640 440" width="120%" height="150%" aria-hidden="true">
-        <defs>
-          <linearGradient id="trailGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stop-color="#87b9ff" stop-opacity="0.05"/>
-            <stop offset="35%" stop-color="#87b9ff" stop-opacity="0.5"/>
-            <stop offset="70%" stop-color="#ffd86f" stop-opacity="0.95"/>
-            <stop offset="100%" stop-color="#ffffff" stop-opacity="0.15"/>
-          </linearGradient>
-          <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-        </defs>
-        <text x="92" y="294" text-anchor="middle" font-size="74">🌍</text>
-        <path d="M110 270 C 175 225, 225 185, 285 135 S 385 70, 500 78" stroke="url(#trailGlow)" stroke-width="6" fill="none" stroke-linecap="round" filter="url(#softGlow)"/>
-        <path d="M110 270 C 175 225, 225 185, 285 135 S 385 70, 500 78" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-        <text x="285" y="150" text-anchor="middle" font-size="64" transform="rotate(18 285 150)">🚀</text>
-        <g transform="translate(410 62)">
-          <polygon points="0,-26 6,-9 24,-9 10,3 15,19 0,10 -15,19 -10,3 -24,-9 -6,-9" fill="#ffd86f" opacity="1"/>
-          <polygon points="42,-14 46,-5 56,-5 48,1 51,11 42,6 33,11 36,1 28,-5 38,-5" fill="#ffffff" opacity="1"/>
-          <polygon points="68,20 70,27 77,27 71,32 73,39 68,34 63,39 65,32 59,27 66,27" fill="#87b9ff" opacity="1"/>
-          <circle cx="-32" cy="14" r="4" fill="#ffffff" opacity="1"/>
-          <circle cx="88" cy="3" r="3" fill="#ffd86f" opacity="1"/>
-          <circle cx="24" cy="33" r="2.5" fill="#ffffff" opacity="1"/>
-        </g>
-        <circle cx="360" cy="34" r="3" fill="#ffffff" opacity="1"/>
-        <circle cx="470" cy="40" r="2.5" fill="#ffffff" opacity="1"/>
-        <circle cx="300" cy="22" r="2" fill="#ffffff" opacity="1"/>
-        <circle cx="445" cy="154" r="2.5" fill="#ffffff" opacity="1"/>
-      </svg>
+      <!-- your SVG here -->
     </div>
   </section>
+
   <footer><div class="container">Rudheer Potu • July 11, 2026 • California</div></footer>
+
+  <script>
+    const targetDate = new Date("2026-07-11T00:00:00").getTime();
+    const el = document.getElementById("countdown");
+
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        el.textContent = "Today is the party!";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      el.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
