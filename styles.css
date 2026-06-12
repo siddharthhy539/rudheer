@@ -424,3 +424,8 @@ details p {
     height: auto;
   }
 }
+
+#countdown {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 800;
+}
